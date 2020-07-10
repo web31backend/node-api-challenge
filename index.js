@@ -12,3 +12,10 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Go code!
 */
+let server = require("./api/server");
+
+let PORT = 1123;
+
+server.listen(PORT, () => {
+    console.log(`\n == running server @ port ${PORT} == \n`)
+})
