@@ -39,15 +39,21 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 - [ ] Mention two parts of Express that you learned about this week.
+    a form of framework that sits on top of the server giving us a lot of functionality 
+    to build server with much ease. It also lets us create RESTful api, gives us a lot of
+    options for cleaner code with the use of routers giving by express as well.
 
 - [ ] Describe Middleware?
+    functions that gives us more options when creating endpoints, these can be used for various functionalities like validating dating and verifying them before hitting the db.
 
 - [ ] Describe a Resource?
+    resources are what we create in forms of endpoints, or methods/helpers.
+    An example of a resource is an endpoint that holds data. the endpoint we create is a resource and so are the different models/helpers to access them.
 
 - [ ] What can the API return to help clients know if a request was successful?
-
+    HTTP status codes, 200 is a successful status code
 - [ ] How can we partition our application into sub-applications?
-
+    using express Router, we can break down our application into pieces and link them together, giving us cleaner, accessible code.
 ## Minimum Viable Product
 
 - [ ] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.

@@ -40,7 +40,7 @@ router.post("/", (req, res) => {
 
     if(newAction){
         if(!newAction.notes || !newAction.description || !newAction.project_id) {
-            res.status(400).json({ message: "Must include desciption, notes and project_id fields" })
+            res.status(400).json({ message: "Must include description, notes and project_id fields" })
         } else {
             Actions.insert(newAction)
             .then(action => {
