@@ -76,4 +76,19 @@ router.put("/:id", (req, res) => {
     })
 })
 
+// ===================================================================== PUT ==========
+router.delete("/:id", (req, res) => {
+    let { id } = req.params;
+    Actions.remove(id)
+    .then(count => {
+        if(count > 0) {
+            res.status(200).json({ message: `Successfully deleted action with ID ${id}` })
+        } else {
+            res.status(404).json({ error: `Could not find project to delete with ID ${id}` })
+        }
+    })
+    .catch(err => res.status(500).json({ errorMessage: "Could not process delete request" }))
+})
+
+
 module.exports = router;
